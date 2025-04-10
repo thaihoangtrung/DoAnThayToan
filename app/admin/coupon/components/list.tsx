@@ -65,27 +65,6 @@ export default function CouponManagement() {
     }
   }
 
-  const handleDeleteCoupon = async (id: string) => {
-    if (!window.confirm("Are you sure you want to delete this coupon?")) {
-      return
-    }
-    try {
-      // Assuming your backend needs the ID to delete
-      await axios.delete(`${API_URL}/coupon/${id}`) // Corrected to use ID if needed by backend
-      fetchCoupons()
-    } catch (error) {
-      console.error("Error deleting coupon:", error)
-       // Add user feedback here
-    }
-  }
-
-  // Function to open the edit dialog
-  const handleOpenEditDialog = (coupon: Coupon) => {
-    setEditingCoupon(coupon)
-    setUpdatedValue(coupon.value)
-    setIsEditDialogOpen(true)
-  }
-
   // Function to handle the update submission
   const handleUpdateCoupon = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -140,7 +119,6 @@ export default function CouponManagement() {
                   <TableHead>Code</TableHead>
                   <TableHead>Value</TableHead>
                   <TableHead>Created</TableHead>
-                  <TableHead className="text-right">Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -157,16 +135,6 @@ export default function CouponManagement() {
                       <TableCell className="font-medium">{coupon.code}</TableCell>
                       <TableCell>{coupon.value}</TableCell>
                       <TableCell>{formatDate(coupon.createdAt)}</TableCell>
-                      <TableCell className="text-right space-x-1"> {/* Added space-x-1 for button spacing */} 
-                        <Button variant="ghost" size="icon" onClick={() => handleOpenEditDialog(coupon)} aria-label={`Edit coupon ${coupon.code}`}>
-                          <Pencil className="h-4 w-4 text-blue-500" />
-                          <span className="sr-only">Edit</span>
-                        </Button>
-                        <Button variant="ghost" size="icon" onClick={() => handleDeleteCoupon(coupon._id)} aria-label={`Delete coupon ${coupon.code}`}>
-                          <Trash2 className="h-4 w-4 text-destructive" />
-                          <span className="sr-only">Delete</span>
-                        </Button>
-                      </TableCell>
                     </TableRow>
                   ))
                 )}
