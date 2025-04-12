@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           <div className="col-span-2 md:col-span-2">
-          <h1 className="text-3xl text-white py-4">Đồ Án Thầy Tùng</h1>
+          <h1 className="text-3xl text-white py-4">Đồ Án Thầy Toàn</h1>
             <div className="flex space-x-4">
               <Link href="#" aria-label="Facebook">
                 <Facebook size={24} />
