@@ -38,7 +38,7 @@ const NavBarPage = () => {
         <>
             <header className="flex items-center justify-between p-6 bg-black sticky top-0 z-40">
                 <Link href="/">
-                    <h1 className="text-3xl text-white">Đồ Án Thầy Tùng</h1>
+                    <h1 className="text-3xl text-white">Đồ Án Thầy Toàn</h1>
                 </Link>
                 <ul className="relative items-center space-x-0 hidden md:flex">
                     {NAV_ITEMS.map((navItem) => (
