@@ -52,7 +52,7 @@ export default function Footer() {
                 <Link href="/policy">Chính sách đổi trả</Link>
               </li>
               <li>
-                <Link href="/faq">Câu hỏi thường gặp</Link>
+                <Link href="/">Câu hỏi thường gặp</Link>
               </li>
             </ul>
           </div>
