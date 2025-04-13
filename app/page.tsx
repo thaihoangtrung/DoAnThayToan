@@ -14,7 +14,7 @@ export default function Home() {
       <FlashSalePage />
       <PolicyCommitments />
       <CardHomePage />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <BlogHomePage />
     </>
   );
