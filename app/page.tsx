@@ -13,8 +13,8 @@ export default function Home() {
       <HeroParallaxDemo />
       <FlashSalePage />
       <PolicyCommitments />
-      <CardHomePage />
-      {/* <Testimonial /> */}
+      <CardHomePage /> 
+      <Testimonial />
       <BlogHomePage />
     </>
   );
